@@ -15,7 +15,6 @@ import aifunctions
 import helperfunctions
 import mediainfo
 import guess
-import tormag
 import progconv
 import others
 import tictactoe
@@ -1436,3 +1435,4 @@ def text(client: pyrogram.client.Client, message: pyrogram.types.messages_and_me
 #apprun
 print("Bot Started")
 app.run()
+
