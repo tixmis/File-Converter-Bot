@@ -87,8 +87,6 @@ docker run File-Converter
 
 **SAVE RESTRICTED** - *Send a Resctircted Public Chat Post's Link, Bot will Send you that Post*
 
-**Torrent <-> Magnet** - *Send Torrent File to get Magnet Link and Viceversa*
-
 **Time and Date** - *Send 'Time' or 'Date' keyword to get Current Time & Date in Several TimeZones*
 
 **Maths** - *Send Math Expression (in Python Format) to get its Result*
@@ -161,3 +159,4 @@ docker run File-Converter
 - for **TEXT-to-MUSIC** it uses **[Riffusion](https://github.com/riffusion/riffusion) hosted on [HuggingFace](https://huggingface.co/spaces/fffiloni/spectrogram-to-music)**
 
 - for **BG REMOVE** it uses **[MODNet](https://github.com/ZHKKKe/MODNet) hosted on [HuggingFace](https://huggingface.co/spaces/nateraw/background-remover)**
+
