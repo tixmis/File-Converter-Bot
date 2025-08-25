@@ -206,7 +206,13 @@ PRO_TEXT = helperfunctions.give_name(PRO)
 T3D_TEXT = helperfunctions.give_name(T3D)
 
 
-START_TEXT = f'**Images** 📷 \n__{IMG_TEXT}__\n\n\
+START_TEXT = (
+    f"**Images** 📷 \n__{IMG_TEXT}__\n\n"
+    f"**Videos/Audios** 🎞️ \n__{VID_TEXT}__\n\n"
+    f"**Documents** 📚 \n__{DOC_TEXT}__\n\n"
+    f"**Others** 📂 \n__{MISC_TEXT}__"
+)
+
 **Videos/Audios** 📹 / 🔊 \n__{VA_TEXT}__\n\n\
 **Documents** 💼 \n__{LBW_TEXT},{LBI_TEXT},{LBC_TEXT}__\n\n\
 **Fonts** 🔤 \n__{FF_TEXT}__\n\n\
@@ -218,3 +224,4 @@ START_TEXT = f'**Images** 📷 \n__{IMG_TEXT}__\n\n\
 **Special** 🎁 \n__Colorize, Positive, Upscale, Text-to-Speech, Speech-to-Text, AI Image, Chat with AI, AI Article Writter, Text-to-3D, TEXT-to-MUSIC, BG REMOVE, Scan, Compile & Run__\n\n\
 
 **Extra** ➕  \n__Play TicTacToe, Guess Game, Save Restricted Content, Time or Date, Maths & Base64__'
+
