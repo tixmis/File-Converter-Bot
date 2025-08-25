@@ -144,8 +144,6 @@ docker run File-Converter
 
 - for **Upscalling Images** it uses **[Zyro's Image-Upscaller](https://zyro.com/in/tools/image-upscaler)** 
 
-- for **Torrents** it uses **[iTorrents](https://itorrents.org/)** and **[Torrent2Magnet](https://github.com/repolho/torrent2magnet)**
-
 - for **Date and Time** it uses **[Arrow](https://github.com/arrow-py/arrow)**
 
 - for **Maths** and **RUN** it uses **[ASTeval](https://github.com/newville/asteval)**
@@ -159,4 +157,5 @@ docker run File-Converter
 - for **TEXT-to-MUSIC** it uses **[Riffusion](https://github.com/riffusion/riffusion) hosted on [HuggingFace](https://huggingface.co/spaces/fffiloni/spectrogram-to-music)**
 
 - for **BG REMOVE** it uses **[MODNet](https://github.com/ZHKKKe/MODNet) hosted on [HuggingFace](https://huggingface.co/spaces/nateraw/background-remover)**
+
 
