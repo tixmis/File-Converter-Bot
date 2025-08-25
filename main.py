@@ -20,15 +20,44 @@ import others
 import tictactoe
 
 
-# env
-bot_token = os.environ.get("TOKEN", "") 
-api_hash = os.environ.get("HASH", "") 
-api_id = os.environ.get("ID", "")
+# ========= ENV & CLIENT =========
+import os
+from pyrogram import Client
 
+def _need(v: str) -> str:
+    if not v:
+        raise RuntimeError(f"❌ Не задана переменная окружения: {v}")
+    return v
 
-# bot
-app = Client("my_bot",api_id=api_id, api_hash=api_hash,bot_token=bot_token)
-MESGS = {}
+# читаем переменные окружения, кастуем ID к int
+BOT_TOKEN = os.environ.get("TOKEN", "").strip()
+API_HASH  = os.environ.get("HASH", "").strip()
+API_ID_RAW = os.environ.get("ID", "").strip()
+
+if not BOT_TOKEN:
+    raise RuntimeError("❌ Переменная TOKEN пуста")
+if not API_HASH:
+    raise RuntimeError("❌ Переменная HASH пуста")
+if not API_ID_RAW:
+    raise RuntimeError("❌ Переменная ID пуста")
+
+try:
+    API_ID = int(API_ID_RAW)
+except ValueError:
+    raise RuntimeError(f"❌ ID должен быть числом, а не '{API_ID_RAW}'")
+
+MODE = os.environ.get("MODE", "polling").lower()
+os.environ["PYTHONUNBUFFERED"] = os.environ.get("PYTHONUNBUFFERED", "1")
+
+# создаём клиента Pyrogram с api_id/api_hash + bot_token
+app = Client(
+    name="file_converter_bot",
+    api_id=API_ID,
+    api_hash=API_HASH,
+    bot_token=BOT_TOKEN,
+    workdir=".",  # чтобы сессия писалась в рабочую директорию контейнера
+)
+# ========= /ENV & CLIENT =========
 
 
 # msgs functions
@@ -1435,4 +1464,5 @@ def text(client: pyrogram.client.Client, message: pyrogram.types.messages_and_me
 #apprun
 print("Bot Started")
 app.run()
+
 
