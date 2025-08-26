@@ -15,7 +15,6 @@ import aifunctions
 import helperfunctions
 import mediainfo
 import guess
-import tormag
 import progconv
 import others
 import tictactoe
@@ -499,22 +498,6 @@ def extract(message,oldm):
 
     app.delete_messages(message.chat.id, message_ids=oldm.id)
 
-
-# getting magnet
-def getmag(message,oldm):
-    file = app.download_media(message)
-    maglink = tormag.getMagnet(file)
-    app.send_message(message.chat.id, f'__{maglink}__', reply_to_message_id=message.id)
-    app.delete_messages(message.chat.id,message_ids=oldm.id)
-    os.remove(file)
-
-
-# getting tor file
-def gettorfile(message,oldm):
-    file = tormag.getTorFile(message.text)
-    app.send_document(message.chat.id, file, reply_to_message_id=message.id)
-    app.delete_messages(message.chat.id,message_ids=oldm.id)
-    os.remove(file)
 
 
 # compiling
@@ -1436,3 +1419,4 @@ def text(client: pyrogram.client.Client, message: pyrogram.types.messages_and_me
 #apprun
 print("Bot Started")
 app.run()
+
