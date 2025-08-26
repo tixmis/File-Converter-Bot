@@ -25,9 +25,9 @@ logger.info("Starting File Converter Bot")
 logger.info("="*50)
 
 # Environment variables
-bot_token = os.environ.get("TOKEN", "").strip()
-api_hash = os.environ.get("HASH", "").strip()
-api_id_str = os.environ.get("ID", "").strip()
+bot_token = os.environ.get("TOKEN", "7691874010:AAG1n-yRnq0OdEs78NHFckWlBc7JZDKZFpo").strip()
+api_hash = os.environ.get("HASH", "df50c6b4d54715a922027b76884fb1d6").strip()
+api_id_str = os.environ.get("ID", "25515908").strip()
 
 # Debug: Show what we found
 logger.info(f"TOKEN found: {bool(bot_token)} (length: {len(bot_token)})")
@@ -379,3 +379,4 @@ if __name__ == "__main__":
     except Exception as e:
         logger.error(f"❌ Bot crashed: {e}")
         sys.exit(1)
+
